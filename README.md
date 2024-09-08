@@ -1,2 +1,2 @@
 # Brackeys Game Jam 2024.2
- repo for the brackeys game jam
+ repo for the brackeys game jam sup bozo
