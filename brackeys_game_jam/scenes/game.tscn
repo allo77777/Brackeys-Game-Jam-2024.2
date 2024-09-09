@@ -1,0 +1,65 @@
+[gd_scene load_steps=7 format=4 uid="uid://q7hs8vmm8mg1"]
+
+[ext_resource type="Script" path="res://scripts/game.gd" id="1_b7uvj"]
+[ext_resource type="Texture2D" uid="uid://314f8bcas7rs" path="res://assets/TileSet/GrassTileset.png" id="1_feokt"]
+[ext_resource type="PackedScene" uid="uid://dj63f22jbpg1d" path="res://scenes/player.tscn" id="2_li5gt"]
+[ext_resource type="PackedScene" uid="uid://hj2cuxu8yojd" path="res://scenes/tempest_pedestral.tscn" id="4_pmfem"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_sps3h"]
+texture = ExtResource("1_feokt")
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:0/0 = 0
+1:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:0/0 = 0
+2:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:1/0 = 0
+0:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:1/0 = 0
+1:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:1/0 = 0
+2:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:1/0 = 0
+3:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:1/0 = 0
+4:1/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+0:2/0 = 0
+0:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+1:2/0 = 0
+1:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+2:2/0 = 0
+2:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+3:2/0 = 0
+3:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+4:2/0 = 0
+4:2/0/physics_layer_0/polygon_0/points = PackedVector2Array(-8, -8, 8, -8, 8, 8, -8, 8)
+
+[sub_resource type="TileSet" id="TileSet_lxx4p"]
+physics_layer_0/collision_layer = 2
+physics_layer_0/collision_mask = 2
+sources/0 = SubResource("TileSetAtlasSource_sps3h")
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_b7uvj")
+
+[node name="MiddleGround" type="TileMapLayer" parent="."]
+texture_filter = 1
+tile_map_data = PackedByteArray("AAD8/wAAAAABAAAAAAD8/wEAAAABAAEAAAD9/wAAAAABAAAAAAD9/wEAAAABAAEAAAD+/wAAAAABAAAAAAD+/wEAAAABAAEAAAD//wAAAAABAAAAAAD//wEAAAABAAEAAAAAAAAAAAABAAAAAAAAAAEAAAABAAEAAAABAAAAAAABAAAAAAABAAEAAAABAAEAAAACAAAAAAABAAAAAAACAAEAAAABAAEAAAADAAAAAAABAAAAAAADAAEAAAABAAEAAAAEAAAAAAABAAAAAAAEAAEAAAABAAEAAAAFAAAAAAABAAAAAAAFAAEAAAABAAEAAAAGAAAAAAABAAAAAAAGAAEAAAABAAEAAAAHAAAAAAABAAAAAAAHAAEAAAABAAEAAAAIAAAAAAABAAAAAAAIAAEAAAABAAEAAAAJAAAAAAABAAAAAAAJAAEAAAABAAEAAAAKAAAAAAABAAAAAAAKAAEAAAABAAEAAAD7/wAAAAADAAIAAAD7////AAACAAEAAAD7//7/AAACAAEAAAD7//3/AAACAAEAAAD7//z/AAACAAEAAAD7//v/AAACAAEAAAD7//r/AAACAAEAAAD7//n/AAACAAEAAAD7//j/AAACAAEAAAD7//f/AAACAAEAAAD7//b/AAACAAEAAAALAAAAAAACAAAAAAALAAEAAAACAAEAAAAPAP//AAADAAEAAAAQAP//AAAEAAEAAAAVAP7/AAADAAEAAAAWAP7/AAAEAAEAAAAaAP3/AAADAAEAAAAbAP3/AAAEAAEAAAAeAP7/AAAAAAAAAAAeAP//AAAAAAEAAAAfAP7/AAABAAAAAAAfAP//AAABAAEAAAAgAP7/AAABAAAAAAAgAP//AAABAAEAAAAhAP7/AAABAAAAAAAhAP//AAABAAEAAAAiAP7/AAABAAAAAAAiAP//AAABAAEAAAAjAP7/AAABAAAAAAAjAP//AAABAAEAAAAkAP7/AAABAAAAAAAkAP//AAABAAEAAAAlAP7/AAABAAAAAAAlAP//AAABAAEAAAAmAP7/AAABAAAAAAAmAP//AAABAAEAAAAnAP7/AAABAAAAAAAnAP//AAABAAEAAAAoAP7/AAABAAAAAAAoAP//AAABAAEAAAApAP7/AAABAAAAAAApAP//AAABAAEAAAAqAP7/AAABAAAAAAAqAP//AAABAAEAAAArAP7/AAABAAAAAAArAP//AAABAAEAAAAsAP7/AAABAAAAAAAsAP//AAABAAEAAAAtAP7/AAABAAAAAAAtAP//AAABAAEAAAAuAP7/AAABAAAAAAAuAP//AAABAAEAAAAvAP7/AAABAAAAAAAvAP//AAABAAEAAAA=")
+tile_set = SubResource("TileSet_lxx4p")
+
+[node name="Player" parent="." node_paths=PackedStringArray("game") instance=ExtResource("2_li5gt")]
+position = Vector2(0, -20)
+collision_mask = 2
+game = NodePath("..")
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+zoom = Vector2(4, 4)
+position_smoothing_enabled = true
+
+[node name="TempestPedestral" parent="." node_paths=PackedStringArray("game") instance=ExtResource("4_pmfem")]
+position = Vector2(606, -40)
+game = NodePath("..")
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
+color = Color(0.411765, 0.411765, 0.411765, 0.615686)
