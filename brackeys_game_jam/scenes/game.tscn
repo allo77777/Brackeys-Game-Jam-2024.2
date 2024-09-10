@@ -661,7 +661,7 @@ position = Vector2(500, -75)
 [node name="Layer1" type="Parallax2D" parent="ParallaxBackground"]
 scroll_scale = Vector2(0.8, 1)
 repeat_size = Vector2(320, 0)
-repeat_times = 6
+repeat_times = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Layer1"]
 texture_filter = 1
@@ -670,7 +670,7 @@ texture = ExtResource("7_twnx8")
 [node name="Layer2" type="Parallax2D" parent="ParallaxBackground"]
 scroll_scale = Vector2(0.9, 1)
 repeat_size = Vector2(320, 0)
-repeat_times = 6
+repeat_times = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Layer2"]
 texture_filter = 1
@@ -678,7 +678,7 @@ texture = ExtResource("8_cbw2h")
 
 [node name="Layer3" type="Parallax2D" parent="ParallaxBackground"]
 repeat_size = Vector2(320, 0)
-repeat_times = 6
+repeat_times = 5
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/Layer3"]
 texture_filter = 1
